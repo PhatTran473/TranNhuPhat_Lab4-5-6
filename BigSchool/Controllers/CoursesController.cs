@@ -29,9 +29,15 @@ namespace BigSchool.Controllers
         }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
 
         {
+            if(!ModelState.IsValid)
+            {
+                viewModel.Categories = _dbContext.Categorys.ToList();
+                return View("Create", viewModel);
+            }
             var Course = new Course
             {
                 LecturedId = User.Identity.GetUserId(),

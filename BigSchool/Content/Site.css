@@ -22,3 +22,19 @@ select,
 textarea {
     max-width: 280px;
 }
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background-color: #130c96;
+    border-color: #1a7fd6;
+}
+.container .jumbotron {
+    background-color: #06f7e9;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+.btn-lg {
+    padding: 10px 16px;
+    background-color: black;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
